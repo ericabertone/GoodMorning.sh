@@ -93,7 +93,7 @@ if [[ exit_status -eq 0 ]]; then
 	conda clean --all --yes
 
 	printf "\nR packages update\n"
-	R -q -e "update.packages(repos='http://cran.us.r-project.org', ask = FALSE)"
+	R -q -e "update.packages(repos='https://cran.rstudio.com', ask = FALSE)"
 
 	printf "\n#################################### \n"
 	printf "##    Done! See you tomorrow :)   ## \n"
