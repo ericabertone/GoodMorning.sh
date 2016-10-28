@@ -72,7 +72,7 @@ On_IWhite='\033[0;107m'   # White
 
 
 printf "\n#################################### \n"
-printf "##      Goodmorning ${Blue}$(whoami)${Color_Off} :)     ## \n"
+printf "##      Goodmorning ${Red}$(whoami)${Color_Off} :)     ## \n"
 printf "#################################### \n\n"
 
 printf "Let's check your Internet connection first... \n\n"
@@ -82,10 +82,10 @@ ping -q -c 5 www.google.com ; exit_status="$?"
 if [[ exit_status -eq 0 ]]; then
 	printf "\nOk, your Internet connection is working. Here we go! :)\n\n"
 
-	printf "\nBrew update and upgrade\n"
+	printf "\n${Yellow}Brew${Color_Off} update and upgrade\n"
 	brew update && brew upgrade && brew prune && brew cleanup
 
-	printf "Conda and Python update\n"
+	printf "\n${Green}Conda and Python${Color_Off} update\n"
 	conda update conda --yes
 	conda update anaconda --yes
 	conda update python --yes
@@ -94,7 +94,7 @@ if [[ exit_status -eq 0 ]]; then
 	#conda update --all --yes
 	conda clean --all --yes
 
-	printf "\nR packages update\n"
+	printf "\n${Blue}R packages${Color_Off} update\n"
 	R -q -e "update.packages(repos='https://cran.rstudio.com', ask = FALSE)"
 
 	printf "\n#################################### \n"
