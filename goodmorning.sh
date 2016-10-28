@@ -89,9 +89,9 @@ if [[ exit_status -eq 0 ]]; then
 	conda update conda --yes
 	conda update anaconda --yes
 	conda update python --yes
-	conda update ipython --yes
+	#conda update ipython --yes
 	conda update jupyter --yes
-	#conda update --all --yes
+	conda update --all --yes
 	conda clean --all --yes
 
 	printf "\n${Blue}R packages${Color_Off} update\n"
