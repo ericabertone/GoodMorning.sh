@@ -86,12 +86,12 @@ if [[ exit_status -eq 0 ]]; then
 	brew update && brew upgrade && brew prune && brew cleanup
 
 	printf "Conda and Python update\n"
-	conda update --all --yes
-	conda update conda
-	conda update anaconda
-	conda update python
-	conda update ipython
-	conda update jupyter
+	conda update conda --yes
+	conda update anaconda --yes
+	conda update python --yes
+	conda update ipython --yes
+	conda update jupyter --yes
+	#conda update --all --yes
 	conda clean --all --yes
 
 	printf "\nR packages update\n"
