@@ -87,7 +87,7 @@ if [[ exit_status -eq 0 ]]; then
 
 	printf "\n${Green}Conda and Python${Color_Off} update\n"
 	conda update conda --yes
-	conda update anaconda --yes
+	#conda update anaconda --yes
 	conda update python --yes
 	#conda update ipython --yes
 	conda update jupyter --yes
